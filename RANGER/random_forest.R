@@ -34,14 +34,7 @@ testData  <- testing(dataSplit)
 dia_vfold <- vfold_cv(trainData, v = 10, repeats = 5, strata = SalePrice)
 
 # Try a ranger model
-rfModelRanger <-
-    rand_forest(
-        mode = "regression",
-        engine = "ranger",
-        mtry = tune(),
-        trees = tune(),
-        min_n = 2
-    )
+
 rfModelRanger <-
     rand_forest(
         mode = "regression",
